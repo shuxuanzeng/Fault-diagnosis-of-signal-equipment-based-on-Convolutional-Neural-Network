@@ -29,13 +29,12 @@ Compared with the LeNet-5 model, the high accuracy of ResNet50d indicates that t
 network plays a role in the complex working environment of turnouts, which can improve the
 efficiency of turnout fault diagnosis.
 Finally, the results show that both models have obvious effects on diagnosis. It shows that
-the convolutional neural network can use multiple convolutional layers and the nonlinear
-
-
-Reference: https://blog.csdn.net/ECHOSON/article/details/141068765?spm=1001.2014.3001.5502
+the convolutional neural network can use multiple convolutional layers and the nonlinear 
 activation function of each layer to automatically extract features from input samples, greatly
 reduce the complexity of the network, have strong classification ability, and overcome the
 weakness of incomplete feature extraction by artificial use of expert knowledge, which has
 important application value in ensuring the safe and reliable operation of railways.
 Keyword: Convolutional Neural Network; fault diagnosis; action current curves; turnout;
 feature extraction
+
+Reference: https://blog.csdn.net/ECHOSON/article/details/141068765?spm=1001.2014.3001.5502
