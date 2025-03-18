@@ -30,6 +30,9 @@ network plays a role in the complex working environment of turnouts, which can i
 efficiency of turnout fault diagnosis.
 Finally, the results show that both models have obvious effects on diagnosis. It shows that
 the convolutional neural network can use multiple convolutional layers and the nonlinear
+
+
+Reference: https://blog.csdn.net/ECHOSON/article/details/141068765?spm=1001.2014.3001.5502
 activation function of each layer to automatically extract features from input samples, greatly
 reduce the complexity of the network, have strong classification ability, and overcome the
 weakness of incomplete feature extraction by artificial use of expert knowledge, which has
