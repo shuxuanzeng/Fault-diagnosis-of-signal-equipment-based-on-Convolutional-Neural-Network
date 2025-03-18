@@ -1,0 +1,1500 @@
+timm
+opencv-python
+pyqt5
+tqdm
+tqdm
+pillow
+C:\Users\Titanic\Anaconda\envs\PyTorch\python.exe C:\Users\Titanic\Desktop\2023_pytorch110_classification_42-master\train.py
+C:\Users\Titanic\Anaconda\envs\PyTorch\lib\site-packages\torchvision\io\image.py:13: UserWarning: Failed to load image Python extension: '[WinError 127] 找不到指定的程序。'If you don't plan on using image functionality from `torchvision.io`, you can ignore this warning. Otherwise, there might be something wrong with your environment. Did you have `libjpeg` or `libpng` installed before building `torchvision` from source?
+  warn(
+Using device: cpu
+['0', '1', '2', '3', '4', '5', '6', '7', '8']
+EfficientNet(
+  (conv_stem): Conv2d(3, 40, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+  (bn1): BatchNormAct2d(
+    40, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+    (drop): Identity()
+    (act): SiLU(inplace=True)
+  )
+  (blocks): Sequential(
+    (0): Sequential(
+      (0): DepthwiseSeparableConv(
+        (conv_dw): Conv2d(40, 40, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=40, bias=False)
+        (bn1): BatchNormAct2d(
+          40, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): SiLU(inplace=True)
+        )
+        (se): SqueezeExcite(
+          (conv_reduce): Conv2d(40, 10, kernel_size=(1, 1), stride=(1, 1))
+          (act1): SiLU(inplace=True)
+          (conv_expand): Conv2d(10, 40, kernel_size=(1, 1), stride=(1, 1))
+          (gate): Sigmoid()
+        )
+        (conv_pw): Conv2d(40, 24, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn2): BatchNormAct2d(
+          24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): Identity()
+        )
+        (drop_path): Identity()
+      )
+      (1): DepthwiseSeparableConv(
+        (conv_dw): Conv2d(24, 24, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=24, bias=False)
+        (bn1): BatchNormAct2d(
+          24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): SiLU(inplace=True)
+        )
+        (se): SqueezeExcite(
+          (conv_reduce): Conv2d(24, 6, kernel_size=(1, 1), stride=(1, 1))
+          (act1): SiLU(inplace=True)
+          (conv_expand): Conv2d(6, 24, kernel_size=(1, 1), stride=(1, 1))
+          (gate): Sigmoid()
+        )
+        (conv_pw): Conv2d(24, 24, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn2): BatchNormAct2d(
+          24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): Identity()
+        )
+        (drop_path): Identity()
+      )
+    )
+    (1): Sequential(
+      (0): InvertedResidual(
+        (conv_pw): Conv2d(24, 144, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNormAct2d(
+          144, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): SiLU(inplace=True)
+        )
+        (conv_dw): Conv2d(144, 144, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), groups=144, bias=False)
+        (bn2): BatchNormAct2d(
+          144, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): SiLU(inplace=True)
+        )
+        (se): SqueezeExcite(
+          (conv_reduce): Conv2d(144, 6, kernel_size=(1, 1), stride=(1, 1))
+          (act1): SiLU(inplace=True)
+          (conv_expand): Conv2d(6, 144, kernel_size=(1, 1), stride=(1, 1))
+          (gate): Sigmoid()
+        )
+        (conv_pwl): Conv2d(144, 32, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNormAct2d(
+          32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): Identity()
+        )
+        (drop_path): Identity()
+      )
+      (1): InvertedResidual(
+        (conv_pw): Conv2d(32, 192, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNormAct2d(
+          192, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): SiLU(inplace=True)
+        )
+        (conv_dw): Conv2d(192, 192, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=192, bias=False)
+        (bn2): BatchNormAct2d(
+          192, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): SiLU(inplace=True)
+        )
+        (se): SqueezeExcite(
+          (conv_reduce): Conv2d(192, 8, kernel_size=(1, 1), stride=(1, 1))
+          (act1): SiLU(inplace=True)
+          (conv_expand): Conv2d(8, 192, kernel_size=(1, 1), stride=(1, 1))
+          (gate): Sigmoid()
+        )
+        (conv_pwl): Conv2d(192, 32, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNormAct2d(
+          32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): Identity()
+        )
+        (drop_path): Identity()
+      )
+      (2): InvertedResidual(
+        (conv_pw): Conv2d(32, 192, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNormAct2d(
+          192, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): SiLU(inplace=True)
+        )
+        (conv_dw): Conv2d(192, 192, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=192, bias=False)
+        (bn2): BatchNormAct2d(
+          192, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): SiLU(inplace=True)
+        )
+        (se): SqueezeExcite(
+          (conv_reduce): Conv2d(192, 8, kernel_size=(1, 1), stride=(1, 1))
+          (act1): SiLU(inplace=True)
+          (conv_expand): Conv2d(8, 192, kernel_size=(1, 1), stride=(1, 1))
+          (gate): Sigmoid()
+        )
+        (conv_pwl): Conv2d(192, 32, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNormAct2d(
+          32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): Identity()
+        )
+        (drop_path): Identity()
+      )
+    )
+    (2): Sequential(
+      (0): InvertedResidual(
+        (conv_pw): Conv2d(32, 192, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNormAct2d(
+          192, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): SiLU(inplace=True)
+        )
+        (conv_dw): Conv2d(192, 192, kernel_size=(5, 5), stride=(2, 2), padding=(2, 2), groups=192, bias=False)
+        (bn2): BatchNormAct2d(
+          192, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): SiLU(inplace=True)
+        )
+        (se): SqueezeExcite(
+          (conv_reduce): Conv2d(192, 8, kernel_size=(1, 1), stride=(1, 1))
+          (act1): SiLU(inplace=True)
+          (conv_expand): Conv2d(8, 192, kernel_size=(1, 1), stride=(1, 1))
+          (gate): Sigmoid()
+        )
+        (conv_pwl): Conv2d(192, 48, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNormAct2d(
+          48, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): Identity()
+        )
+        (drop_path): Identity()
+      )
+      (1): InvertedResidual(
+        (conv_pw): Conv2d(48, 288, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNormAct2d(
+          288, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): SiLU(inplace=True)
+        )
+        (conv_dw): Conv2d(288, 288, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), groups=288, bias=False)
+        (bn2): BatchNormAct2d(
+          288, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): SiLU(inplace=True)
+        )
+        (se): SqueezeExcite(
+          (conv_reduce): Conv2d(288, 12, kernel_size=(1, 1), stride=(1, 1))
+          (act1): SiLU(inplace=True)
+          (conv_expand): Conv2d(12, 288, kernel_size=(1, 1), stride=(1, 1))
+          (gate): Sigmoid()
+        )
+        (conv_pwl): Conv2d(288, 48, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNormAct2d(
+          48, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): Identity()
+        )
+        (drop_path): Identity()
+      )
+      (2): InvertedResidual(
+        (conv_pw): Conv2d(48, 288, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNormAct2d(
+          288, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): SiLU(inplace=True)
+        )
+        (conv_dw): Conv2d(288, 288, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), groups=288, bias=False)
+        (bn2): BatchNormAct2d(
+          288, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): SiLU(inplace=True)
+        )
+        (se): SqueezeExcite(
+          (conv_reduce): Conv2d(288, 12, kernel_size=(1, 1), stride=(1, 1))
+          (act1): SiLU(inplace=True)
+          (conv_expand): Conv2d(12, 288, kernel_size=(1, 1), stride=(1, 1))
+          (gate): Sigmoid()
+        )
+        (conv_pwl): Conv2d(288, 48, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNormAct2d(
+          48, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): Identity()
+        )
+        (drop_path): Identity()
+      )
+    )
+    (3): Sequential(
+      (0): InvertedResidual(
+        (conv_pw): Conv2d(48, 288, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNormAct2d(
+          288, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): SiLU(inplace=True)
+        )
+        (conv_dw): Conv2d(288, 288, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), groups=288, bias=False)
+        (bn2): BatchNormAct2d(
+          288, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): SiLU(inplace=True)
+        )
+        (se): SqueezeExcite(
+          (conv_reduce): Conv2d(288, 12, kernel_size=(1, 1), stride=(1, 1))
+          (act1): SiLU(inplace=True)
+          (conv_expand): Conv2d(12, 288, kernel_size=(1, 1), stride=(1, 1))
+          (gate): Sigmoid()
+        )
+        (conv_pwl): Conv2d(288, 96, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNormAct2d(
+          96, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): Identity()
+        )
+        (drop_path): Identity()
+      )
+      (1): InvertedResidual(
+        (conv_pw): Conv2d(96, 576, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNormAct2d(
+          576, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): SiLU(inplace=True)
+        )
+        (conv_dw): Conv2d(576, 576, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=576, bias=False)
+        (bn2): BatchNormAct2d(
+          576, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): SiLU(inplace=True)
+        )
+        (se): SqueezeExcite(
+          (conv_reduce): Conv2d(576, 24, kernel_size=(1, 1), stride=(1, 1))
+          (act1): SiLU(inplace=True)
+          (conv_expand): Conv2d(24, 576, kernel_size=(1, 1), stride=(1, 1))
+          (gate): Sigmoid()
+        )
+        (conv_pwl): Conv2d(576, 96, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNormAct2d(
+          96, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): Identity()
+        )
+        (drop_path): Identity()
+      )
+      (2): InvertedResidual(
+        (conv_pw): Conv2d(96, 576, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNormAct2d(
+          576, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): SiLU(inplace=True)
+        )
+        (conv_dw): Conv2d(576, 576, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=576, bias=False)
+        (bn2): BatchNormAct2d(
+          576, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): SiLU(inplace=True)
+        )
+        (se): SqueezeExcite(
+          (conv_reduce): Conv2d(576, 24, kernel_size=(1, 1), stride=(1, 1))
+          (act1): SiLU(inplace=True)
+          (conv_expand): Conv2d(24, 576, kernel_size=(1, 1), stride=(1, 1))
+          (gate): Sigmoid()
+        )
+        (conv_pwl): Conv2d(576, 96, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNormAct2d(
+          96, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): Identity()
+        )
+        (drop_path): Identity()
+      )
+      (3): InvertedResidual(
+        (conv_pw): Conv2d(96, 576, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNormAct2d(
+          576, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): SiLU(inplace=True)
+        )
+        (conv_dw): Conv2d(576, 576, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=576, bias=False)
+        (bn2): BatchNormAct2d(
+          576, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): SiLU(inplace=True)
+        )
+        (se): SqueezeExcite(
+          (conv_reduce): Conv2d(576, 24, kernel_size=(1, 1), stride=(1, 1))
+          (act1): SiLU(inplace=True)
+          (conv_expand): Conv2d(24, 576, kernel_size=(1, 1), stride=(1, 1))
+          (gate): Sigmoid()
+        )
+        (conv_pwl): Conv2d(576, 96, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNormAct2d(
+          96, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): Identity()
+        )
+        (drop_path): Identity()
+      )
+      (4): InvertedResidual(
+        (conv_pw): Conv2d(96, 576, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNormAct2d(
+          576, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): SiLU(inplace=True)
+        )
+        (conv_dw): Conv2d(576, 576, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=576, bias=False)
+        (bn2): BatchNormAct2d(
+          576, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): SiLU(inplace=True)
+        )
+        (se): SqueezeExcite(
+          (conv_reduce): Conv2d(576, 24, kernel_size=(1, 1), stride=(1, 1))
+          (act1): SiLU(inplace=True)
+          (conv_expand): Conv2d(24, 576, kernel_size=(1, 1), stride=(1, 1))
+          (gate): Sigmoid()
+        )
+        (conv_pwl): Conv2d(576, 96, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNormAct2d(
+          96, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): Identity()
+        )
+        (drop_path): Identity()
+      )
+    )
+    (4): Sequential(
+      (0): InvertedResidual(
+        (conv_pw): Conv2d(96, 576, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNormAct2d(
+          576, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): SiLU(inplace=True)
+        )
+        (conv_dw): Conv2d(576, 576, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), groups=576, bias=False)
+        (bn2): BatchNormAct2d(
+          576, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): SiLU(inplace=True)
+        )
+        (se): SqueezeExcite(
+          (conv_reduce): Conv2d(576, 24, kernel_size=(1, 1), stride=(1, 1))
+          (act1): SiLU(inplace=True)
+          (conv_expand): Conv2d(24, 576, kernel_size=(1, 1), stride=(1, 1))
+          (gate): Sigmoid()
+        )
+        (conv_pwl): Conv2d(576, 136, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNormAct2d(
+          136, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): Identity()
+        )
+        (drop_path): Identity()
+      )
+      (1): InvertedResidual(
+        (conv_pw): Conv2d(136, 816, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNormAct2d(
+          816, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): SiLU(inplace=True)
+        )
+        (conv_dw): Conv2d(816, 816, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), groups=816, bias=False)
+        (bn2): BatchNormAct2d(
+          816, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): SiLU(inplace=True)
+        )
+        (se): SqueezeExcite(
+          (conv_reduce): Conv2d(816, 34, kernel_size=(1, 1), stride=(1, 1))
+          (act1): SiLU(inplace=True)
+          (conv_expand): Conv2d(34, 816, kernel_size=(1, 1), stride=(1, 1))
+          (gate): Sigmoid()
+        )
+        (conv_pwl): Conv2d(816, 136, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNormAct2d(
+          136, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): Identity()
+        )
+        (drop_path): Identity()
+      )
+      (2): InvertedResidual(
+        (conv_pw): Conv2d(136, 816, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNormAct2d(
+          816, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): SiLU(inplace=True)
+        )
+        (conv_dw): Conv2d(816, 816, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), groups=816, bias=False)
+        (bn2): BatchNormAct2d(
+          816, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): SiLU(inplace=True)
+        )
+        (se): SqueezeExcite(
+          (conv_reduce): Conv2d(816, 34, kernel_size=(1, 1), stride=(1, 1))
+          (act1): SiLU(inplace=True)
+          (conv_expand): Conv2d(34, 816, kernel_size=(1, 1), stride=(1, 1))
+          (gate): Sigmoid()
+        )
+        (conv_pwl): Conv2d(816, 136, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNormAct2d(
+          136, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): Identity()
+        )
+        (drop_path): Identity()
+      )
+      (3): InvertedResidual(
+        (conv_pw): Conv2d(136, 816, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNormAct2d(
+          816, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): SiLU(inplace=True)
+        )
+        (conv_dw): Conv2d(816, 816, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), groups=816, bias=False)
+        (bn2): BatchNormAct2d(
+          816, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): SiLU(inplace=True)
+        )
+        (se): SqueezeExcite(
+          (conv_reduce): Conv2d(816, 34, kernel_size=(1, 1), stride=(1, 1))
+          (act1): SiLU(inplace=True)
+          (conv_expand): Conv2d(34, 816, kernel_size=(1, 1), stride=(1, 1))
+          (gate): Sigmoid()
+        )
+        (conv_pwl): Conv2d(816, 136, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNormAct2d(
+          136, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): Identity()
+        )
+        (drop_path): Identity()
+      )
+      (4): InvertedResidual(
+        (conv_pw): Conv2d(136, 816, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNormAct2d(
+          816, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): SiLU(inplace=True)
+        )
+        (conv_dw): Conv2d(816, 816, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), groups=816, bias=False)
+        (bn2): BatchNormAct2d(
+          816, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): SiLU(inplace=True)
+        )
+        (se): SqueezeExcite(
+          (conv_reduce): Conv2d(816, 34, kernel_size=(1, 1), stride=(1, 1))
+          (act1): SiLU(inplace=True)
+          (conv_expand): Conv2d(34, 816, kernel_size=(1, 1), stride=(1, 1))
+          (gate): Sigmoid()
+        )
+        (conv_pwl): Conv2d(816, 136, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNormAct2d(
+          136, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): Identity()
+        )
+        (drop_path): Identity()
+      )
+    )
+    (5): Sequential(
+      (0): InvertedResidual(
+        (conv_pw): Conv2d(136, 816, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNormAct2d(
+          816, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): SiLU(inplace=True)
+        )
+        (conv_dw): Conv2d(816, 816, kernel_size=(5, 5), stride=(2, 2), padding=(2, 2), groups=816, bias=False)
+        (bn2): BatchNormAct2d(
+          816, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): SiLU(inplace=True)
+        )
+        (se): SqueezeExcite(
+          (conv_reduce): Conv2d(816, 34, kernel_size=(1, 1), stride=(1, 1))
+          (act1): SiLU(inplace=True)
+          (conv_expand): Conv2d(34, 816, kernel_size=(1, 1), stride=(1, 1))
+          (gate): Sigmoid()
+        )
+        (conv_pwl): Conv2d(816, 232, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNormAct2d(
+          232, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): Identity()
+        )
+        (drop_path): Identity()
+      )
+      (1): InvertedResidual(
+        (conv_pw): Conv2d(232, 1392, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNormAct2d(
+          1392, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): SiLU(inplace=True)
+        )
+        (conv_dw): Conv2d(1392, 1392, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), groups=1392, bias=False)
+        (bn2): BatchNormAct2d(
+          1392, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): SiLU(inplace=True)
+        )
+        (se): SqueezeExcite(
+          (conv_reduce): Conv2d(1392, 58, kernel_size=(1, 1), stride=(1, 1))
+          (act1): SiLU(inplace=True)
+          (conv_expand): Conv2d(58, 1392, kernel_size=(1, 1), stride=(1, 1))
+          (gate): Sigmoid()
+        )
+        (conv_pwl): Conv2d(1392, 232, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNormAct2d(
+          232, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): Identity()
+        )
+        (drop_path): Identity()
+      )
+      (2): InvertedResidual(
+        (conv_pw): Conv2d(232, 1392, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNormAct2d(
+          1392, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): SiLU(inplace=True)
+        )
+        (conv_dw): Conv2d(1392, 1392, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), groups=1392, bias=False)
+        (bn2): BatchNormAct2d(
+          1392, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): SiLU(inplace=True)
+        )
+        (se): SqueezeExcite(
+          (conv_reduce): Conv2d(1392, 58, kernel_size=(1, 1), stride=(1, 1))
+          (act1): SiLU(inplace=True)
+          (conv_expand): Conv2d(58, 1392, kernel_size=(1, 1), stride=(1, 1))
+          (gate): Sigmoid()
+        )
+        (conv_pwl): Conv2d(1392, 232, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNormAct2d(
+          232, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): Identity()
+        )
+        (drop_path): Identity()
+      )
+      (3): InvertedResidual(
+        (conv_pw): Conv2d(232, 1392, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNormAct2d(
+          1392, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): SiLU(inplace=True)
+        )
+        (conv_dw): Conv2d(1392, 1392, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), groups=1392, bias=False)
+        (bn2): BatchNormAct2d(
+          1392, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): SiLU(inplace=True)
+        )
+        (se): SqueezeExcite(
+          (conv_reduce): Conv2d(1392, 58, kernel_size=(1, 1), stride=(1, 1))
+          (act1): SiLU(inplace=True)
+          (conv_expand): Conv2d(58, 1392, kernel_size=(1, 1), stride=(1, 1))
+          (gate): Sigmoid()
+        )
+        (conv_pwl): Conv2d(1392, 232, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNormAct2d(
+          232, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): Identity()
+        )
+        (drop_path): Identity()
+      )
+      (4): InvertedResidual(
+        (conv_pw): Conv2d(232, 1392, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNormAct2d(
+          1392, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): SiLU(inplace=True)
+        )
+        (conv_dw): Conv2d(1392, 1392, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), groups=1392, bias=False)
+        (bn2): BatchNormAct2d(
+          1392, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): SiLU(inplace=True)
+        )
+        (se): SqueezeExcite(
+          (conv_reduce): Conv2d(1392, 58, kernel_size=(1, 1), stride=(1, 1))
+          (act1): SiLU(inplace=True)
+          (conv_expand): Conv2d(58, 1392, kernel_size=(1, 1), stride=(1, 1))
+          (gate): Sigmoid()
+        )
+        (conv_pwl): Conv2d(1392, 232, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNormAct2d(
+          232, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): Identity()
+        )
+        (drop_path): Identity()
+      )
+      (5): InvertedResidual(
+        (conv_pw): Conv2d(232, 1392, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNormAct2d(
+          1392, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): SiLU(inplace=True)
+        )
+        (conv_dw): Conv2d(1392, 1392, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), groups=1392, bias=False)
+        (bn2): BatchNormAct2d(
+          1392, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): SiLU(inplace=True)
+        )
+        (se): SqueezeExcite(
+          (conv_reduce): Conv2d(1392, 58, kernel_size=(1, 1), stride=(1, 1))
+          (act1): SiLU(inplace=True)
+          (conv_expand): Conv2d(58, 1392, kernel_size=(1, 1), stride=(1, 1))
+          (gate): Sigmoid()
+        )
+        (conv_pwl): Conv2d(1392, 232, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNormAct2d(
+          232, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): Identity()
+        )
+        (drop_path): Identity()
+      )
+    )
+    (6): Sequential(
+      (0): InvertedResidual(
+        (conv_pw): Conv2d(232, 1392, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNormAct2d(
+          1392, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): SiLU(inplace=True)
+        )
+        (conv_dw): Conv2d(1392, 1392, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=1392, bias=False)
+        (bn2): BatchNormAct2d(
+          1392, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): SiLU(inplace=True)
+        )
+        (se): SqueezeExcite(
+          (conv_reduce): Conv2d(1392, 58, kernel_size=(1, 1), stride=(1, 1))
+          (act1): SiLU(inplace=True)
+          (conv_expand): Conv2d(58, 1392, kernel_size=(1, 1), stride=(1, 1))
+          (gate): Sigmoid()
+        )
+        (conv_pwl): Conv2d(1392, 384, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNormAct2d(
+          384, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): Identity()
+        )
+        (drop_path): Identity()
+      )
+      (1): InvertedResidual(
+        (conv_pw): Conv2d(384, 2304, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNormAct2d(
+          2304, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): SiLU(inplace=True)
+        )
+        (conv_dw): Conv2d(2304, 2304, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=2304, bias=False)
+        (bn2): BatchNormAct2d(
+          2304, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): SiLU(inplace=True)
+        )
+        (se): SqueezeExcite(
+          (conv_reduce): Conv2d(2304, 96, kernel_size=(1, 1), stride=(1, 1))
+          (act1): SiLU(inplace=True)
+          (conv_expand): Conv2d(96, 2304, kernel_size=(1, 1), stride=(1, 1))
+          (gate): Sigmoid()
+        )
+        (conv_pwl): Conv2d(2304, 384, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNormAct2d(
+          384, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): Identity()
+        )
+        (drop_path): Identity()
+      )
+    )
+  )
+  (conv_head): Conv2d(384, 1536, kernel_size=(1, 1), stride=(1, 1), bias=False)
+  (bn2): BatchNormAct2d(
+    1536, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+    (drop): Identity()
+    (act): SiLU(inplace=True)
+  )
+  (global_pool): SelectAdaptivePool2d (pool_type=avg, flatten=Flatten(start_dim=1, end_dim=-1))
+  (classifier): Linear(in_features=1536, out_features=9, bias=True)
+)
+Epoch: 1. Train.      Loss: 0.170 | F1: 0.924 | Recall: 0.922 | Accuracy: 0.943: 100%|██████████| 2448/2448 [1:21:58<00:00,  2.01s/it]
+Epoch: 1. Validation. Loss: 0.000 | F1: 1.000 | Recall: 1.000 | Accuracy: 1.000: 100%|██████████| 816/816 [08:12<00:00,  1.66it/s]
+Epoch: 2. Train.      Loss: 0.006 | F1: 0.997 | Recall: 0.997 | Accuracy: 0.998: 100%|██████████| 2448/2448 [1:19:08<00:00,  1.94s/it]
+Epoch: 2. Validation. Loss: 0.000 | F1: 1.000 | Recall: 1.000 | Accuracy: 1.000: 100%|██████████| 816/816 [08:05<00:00,  1.68it/s]
+Epoch: 3. Train.      Loss: 0.033 | F1: 0.985 | Recall: 0.985 | Accuracy: 0.990: 100%|██████████| 2448/2448 [1:19:14<00:00,  1.94s/it]
+Epoch: 3. Validation. Loss: 0.000 | F1: 1.000 | Recall: 1.000 | Accuracy: 1.000: 100%|██████████| 816/816 [08:11<00:00,  1.66it/s]
+Epoch: 4. Train.      Loss: 0.000 | F1: 1.000 | Recall: 1.000 | Accuracy: 1.000: 100%|██████████| 2448/2448 [1:18:54<00:00,  1.93s/it]
+Epoch: 4. Validation. Loss: 0.000 | F1: 1.000 | Recall: 1.000 | Accuracy: 1.000: 100%|██████████| 816/816 [07:56<00:00,  1.71it/s]
+Epoch: 5. Train.      Loss: 0.005 | F1: 0.998 | Recall: 0.998 | Accuracy: 0.999: 100%|██████████| 2448/2448 [1:19:41<00:00,  1.95s/it]
+Epoch: 5. Validation. Loss: 0.000 | F1: 1.000 | Recall: 1.000 | Accuracy: 1.000: 100%|██████████| 816/816 [08:10<00:00,  1.66it/s]
+Epoch: 6. Train.      Loss: 0.000 | F1: 1.000 | Recall: 1.000 | Accuracy: 1.000: 100%|██████████| 2448/2448 [1:21:02<00:00,  1.99s/it]
+Epoch: 6. Validation. Loss: 0.000 | F1: 1.000 | Recall: 1.000 | Accuracy: 1.000: 100%|██████████| 816/816 [08:17<00:00,  1.64it/s]
+Epoch: 7. Train.      Loss: 0.000 | F1: 1.000 | Recall: 1.000 | Accuracy: 1.000: 100%|██████████| 2448/2448 [1:25:31<00:00,  2.10s/it]
+Epoch: 7. Validation. Loss: 0.000 | F1: 1.000 | Recall: 1.000 | Accuracy: 1.000: 100%|██████████| 816/816 [08:18<00:00,  1.64it/s]
+Epoch: 8. Train.      Loss: 0.000 | F1: 1.000 | Recall: 1.000 | Accuracy: 1.000: 100%|██████████| 2448/2448 [1:20:26<00:00,  1.97s/it]
+Epoch: 8. Validation. Loss: 0.000 | F1: 1.000 | Recall: 1.000 | Accuracy: 1.000: 100%|██████████| 816/816 [08:17<00:00,  1.64it/s]
+Epoch: 9. Train.      Loss: 0.000 | F1: 1.000 | Recall: 1.000 | Accuracy: 1.000: 100%|██████████| 2448/2448 [1:20:42<00:00,  1.98s/it]
+Epoch: 9. Validation. Loss: 0.000 | F1: 1.000 | Recall: 1.000 | Accuracy: 1.000: 100%|██████████| 816/816 [08:13<00:00,  1.65it/s]
+Epoch: 10. Train.      Loss: 0.000 | F1: 1.000 | Recall: 1.000 | Accuracy: 1.000: 100%|██████████| 2448/2448 [1:21:31<00:00,  2.00s/it]
+Epoch: 10. Validation. Loss: 0.000 | F1: 1.000 | Recall: 1.000 | Accuracy: 1.000: 100%|██████████| 816/816 [08:12<00:00,  1.66it/s]
+训练已完成，模型和训练日志保存在: ../checkpoints/efficientnet_b3a_pretrained_224
+
+进程已结束,退出代码0
+
+
+
+
+
+
+
+C:\Users\Titanic\Anaconda\envs\PyTorch\python.exe C:\Users\Titanic\Desktop\2023_pytorch110_classification_42-master\test.py
+C:\Users\Titanic\Anaconda\envs\PyTorch\lib\site-packages\torchvision\io\image.py:13: UserWarning: Failed to load image Python extension: '[WinError 127] 找不到指定的程序。'If you don't plan on using image functionality from `torchvision.io`, you can ignore this warning. Otherwise, there might be something wrong with your environment. Did you have `libjpeg` or `libpng` installed before building `torchvision` from source?
+  warn(
+Using device: cpu
+Using device: cpu
+['0', '1', '2', '3', '4', '5', '6', '7', '8']
+EfficientNet(
+  (conv_stem): Conv2d(3, 40, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), bias=False)
+  (bn1): BatchNormAct2d(
+    40, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+    (drop): Identity()
+    (act): SiLU(inplace=True)
+  )
+  (blocks): Sequential(
+    (0): Sequential(
+      (0): DepthwiseSeparableConv(
+        (conv_dw): Conv2d(40, 40, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=40, bias=False)
+        (bn1): BatchNormAct2d(
+          40, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): SiLU(inplace=True)
+        )
+        (se): SqueezeExcite(
+          (conv_reduce): Conv2d(40, 10, kernel_size=(1, 1), stride=(1, 1))
+          (act1): SiLU(inplace=True)
+          (conv_expand): Conv2d(10, 40, kernel_size=(1, 1), stride=(1, 1))
+          (gate): Sigmoid()
+        )
+        (conv_pw): Conv2d(40, 24, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn2): BatchNormAct2d(
+          24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): Identity()
+        )
+        (drop_path): Identity()
+      )
+      (1): DepthwiseSeparableConv(
+        (conv_dw): Conv2d(24, 24, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=24, bias=False)
+        (bn1): BatchNormAct2d(
+          24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): SiLU(inplace=True)
+        )
+        (se): SqueezeExcite(
+          (conv_reduce): Conv2d(24, 6, kernel_size=(1, 1), stride=(1, 1))
+          (act1): SiLU(inplace=True)
+          (conv_expand): Conv2d(6, 24, kernel_size=(1, 1), stride=(1, 1))
+          (gate): Sigmoid()
+        )
+        (conv_pw): Conv2d(24, 24, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn2): BatchNormAct2d(
+          24, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): Identity()
+        )
+        (drop_path): Identity()
+      )
+    )
+    (1): Sequential(
+      (0): InvertedResidual(
+        (conv_pw): Conv2d(24, 144, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNormAct2d(
+          144, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): SiLU(inplace=True)
+        )
+        (conv_dw): Conv2d(144, 144, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), groups=144, bias=False)
+        (bn2): BatchNormAct2d(
+          144, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): SiLU(inplace=True)
+        )
+        (se): SqueezeExcite(
+          (conv_reduce): Conv2d(144, 6, kernel_size=(1, 1), stride=(1, 1))
+          (act1): SiLU(inplace=True)
+          (conv_expand): Conv2d(6, 144, kernel_size=(1, 1), stride=(1, 1))
+          (gate): Sigmoid()
+        )
+        (conv_pwl): Conv2d(144, 32, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNormAct2d(
+          32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): Identity()
+        )
+        (drop_path): Identity()
+      )
+      (1): InvertedResidual(
+        (conv_pw): Conv2d(32, 192, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNormAct2d(
+          192, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): SiLU(inplace=True)
+        )
+        (conv_dw): Conv2d(192, 192, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=192, bias=False)
+        (bn2): BatchNormAct2d(
+          192, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): SiLU(inplace=True)
+        )
+        (se): SqueezeExcite(
+          (conv_reduce): Conv2d(192, 8, kernel_size=(1, 1), stride=(1, 1))
+          (act1): SiLU(inplace=True)
+          (conv_expand): Conv2d(8, 192, kernel_size=(1, 1), stride=(1, 1))
+          (gate): Sigmoid()
+        )
+        (conv_pwl): Conv2d(192, 32, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNormAct2d(
+          32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): Identity()
+        )
+        (drop_path): Identity()
+      )
+      (2): InvertedResidual(
+        (conv_pw): Conv2d(32, 192, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNormAct2d(
+          192, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): SiLU(inplace=True)
+        )
+        (conv_dw): Conv2d(192, 192, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=192, bias=False)
+        (bn2): BatchNormAct2d(
+          192, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): SiLU(inplace=True)
+        )
+        (se): SqueezeExcite(
+          (conv_reduce): Conv2d(192, 8, kernel_size=(1, 1), stride=(1, 1))
+          (act1): SiLU(inplace=True)
+          (conv_expand): Conv2d(8, 192, kernel_size=(1, 1), stride=(1, 1))
+          (gate): Sigmoid()
+        )
+        (conv_pwl): Conv2d(192, 32, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNormAct2d(
+          32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): Identity()
+        )
+        (drop_path): Identity()
+      )
+    )
+    (2): Sequential(
+      (0): InvertedResidual(
+        (conv_pw): Conv2d(32, 192, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNormAct2d(
+          192, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): SiLU(inplace=True)
+        )
+        (conv_dw): Conv2d(192, 192, kernel_size=(5, 5), stride=(2, 2), padding=(2, 2), groups=192, bias=False)
+        (bn2): BatchNormAct2d(
+          192, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): SiLU(inplace=True)
+        )
+        (se): SqueezeExcite(
+          (conv_reduce): Conv2d(192, 8, kernel_size=(1, 1), stride=(1, 1))
+          (act1): SiLU(inplace=True)
+          (conv_expand): Conv2d(8, 192, kernel_size=(1, 1), stride=(1, 1))
+          (gate): Sigmoid()
+        )
+        (conv_pwl): Conv2d(192, 48, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNormAct2d(
+          48, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): Identity()
+        )
+        (drop_path): Identity()
+      )
+      (1): InvertedResidual(
+        (conv_pw): Conv2d(48, 288, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNormAct2d(
+          288, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): SiLU(inplace=True)
+        )
+        (conv_dw): Conv2d(288, 288, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), groups=288, bias=False)
+        (bn2): BatchNormAct2d(
+          288, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): SiLU(inplace=True)
+        )
+        (se): SqueezeExcite(
+          (conv_reduce): Conv2d(288, 12, kernel_size=(1, 1), stride=(1, 1))
+          (act1): SiLU(inplace=True)
+          (conv_expand): Conv2d(12, 288, kernel_size=(1, 1), stride=(1, 1))
+          (gate): Sigmoid()
+        )
+        (conv_pwl): Conv2d(288, 48, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNormAct2d(
+          48, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): Identity()
+        )
+        (drop_path): Identity()
+      )
+      (2): InvertedResidual(
+        (conv_pw): Conv2d(48, 288, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNormAct2d(
+          288, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): SiLU(inplace=True)
+        )
+        (conv_dw): Conv2d(288, 288, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), groups=288, bias=False)
+        (bn2): BatchNormAct2d(
+          288, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): SiLU(inplace=True)
+        )
+        (se): SqueezeExcite(
+          (conv_reduce): Conv2d(288, 12, kernel_size=(1, 1), stride=(1, 1))
+          (act1): SiLU(inplace=True)
+          (conv_expand): Conv2d(12, 288, kernel_size=(1, 1), stride=(1, 1))
+          (gate): Sigmoid()
+        )
+        (conv_pwl): Conv2d(288, 48, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNormAct2d(
+          48, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): Identity()
+        )
+        (drop_path): Identity()
+      )
+    )
+    (3): Sequential(
+      (0): InvertedResidual(
+        (conv_pw): Conv2d(48, 288, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNormAct2d(
+          288, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): SiLU(inplace=True)
+        )
+        (conv_dw): Conv2d(288, 288, kernel_size=(3, 3), stride=(2, 2), padding=(1, 1), groups=288, bias=False)
+        (bn2): BatchNormAct2d(
+          288, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): SiLU(inplace=True)
+        )
+        (se): SqueezeExcite(
+          (conv_reduce): Conv2d(288, 12, kernel_size=(1, 1), stride=(1, 1))
+          (act1): SiLU(inplace=True)
+          (conv_expand): Conv2d(12, 288, kernel_size=(1, 1), stride=(1, 1))
+          (gate): Sigmoid()
+        )
+        (conv_pwl): Conv2d(288, 96, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNormAct2d(
+          96, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): Identity()
+        )
+        (drop_path): Identity()
+      )
+      (1): InvertedResidual(
+        (conv_pw): Conv2d(96, 576, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNormAct2d(
+          576, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): SiLU(inplace=True)
+        )
+        (conv_dw): Conv2d(576, 576, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=576, bias=False)
+        (bn2): BatchNormAct2d(
+          576, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): SiLU(inplace=True)
+        )
+        (se): SqueezeExcite(
+          (conv_reduce): Conv2d(576, 24, kernel_size=(1, 1), stride=(1, 1))
+          (act1): SiLU(inplace=True)
+          (conv_expand): Conv2d(24, 576, kernel_size=(1, 1), stride=(1, 1))
+          (gate): Sigmoid()
+        )
+        (conv_pwl): Conv2d(576, 96, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNormAct2d(
+          96, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): Identity()
+        )
+        (drop_path): Identity()
+      )
+      (2): InvertedResidual(
+        (conv_pw): Conv2d(96, 576, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNormAct2d(
+          576, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): SiLU(inplace=True)
+        )
+        (conv_dw): Conv2d(576, 576, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=576, bias=False)
+        (bn2): BatchNormAct2d(
+          576, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): SiLU(inplace=True)
+        )
+        (se): SqueezeExcite(
+          (conv_reduce): Conv2d(576, 24, kernel_size=(1, 1), stride=(1, 1))
+          (act1): SiLU(inplace=True)
+          (conv_expand): Conv2d(24, 576, kernel_size=(1, 1), stride=(1, 1))
+          (gate): Sigmoid()
+        )
+        (conv_pwl): Conv2d(576, 96, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNormAct2d(
+          96, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): Identity()
+        )
+        (drop_path): Identity()
+      )
+      (3): InvertedResidual(
+        (conv_pw): Conv2d(96, 576, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNormAct2d(
+          576, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): SiLU(inplace=True)
+        )
+        (conv_dw): Conv2d(576, 576, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=576, bias=False)
+        (bn2): BatchNormAct2d(
+          576, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): SiLU(inplace=True)
+        )
+        (se): SqueezeExcite(
+          (conv_reduce): Conv2d(576, 24, kernel_size=(1, 1), stride=(1, 1))
+          (act1): SiLU(inplace=True)
+          (conv_expand): Conv2d(24, 576, kernel_size=(1, 1), stride=(1, 1))
+          (gate): Sigmoid()
+        )
+        (conv_pwl): Conv2d(576, 96, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNormAct2d(
+          96, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): Identity()
+        )
+        (drop_path): Identity()
+      )
+      (4): InvertedResidual(
+        (conv_pw): Conv2d(96, 576, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNormAct2d(
+          576, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): SiLU(inplace=True)
+        )
+        (conv_dw): Conv2d(576, 576, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=576, bias=False)
+        (bn2): BatchNormAct2d(
+          576, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): SiLU(inplace=True)
+        )
+        (se): SqueezeExcite(
+          (conv_reduce): Conv2d(576, 24, kernel_size=(1, 1), stride=(1, 1))
+          (act1): SiLU(inplace=True)
+          (conv_expand): Conv2d(24, 576, kernel_size=(1, 1), stride=(1, 1))
+          (gate): Sigmoid()
+        )
+        (conv_pwl): Conv2d(576, 96, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNormAct2d(
+          96, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): Identity()
+        )
+        (drop_path): Identity()
+      )
+    )
+    (4): Sequential(
+      (0): InvertedResidual(
+        (conv_pw): Conv2d(96, 576, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNormAct2d(
+          576, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): SiLU(inplace=True)
+        )
+        (conv_dw): Conv2d(576, 576, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), groups=576, bias=False)
+        (bn2): BatchNormAct2d(
+          576, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): SiLU(inplace=True)
+        )
+        (se): SqueezeExcite(
+          (conv_reduce): Conv2d(576, 24, kernel_size=(1, 1), stride=(1, 1))
+          (act1): SiLU(inplace=True)
+          (conv_expand): Conv2d(24, 576, kernel_size=(1, 1), stride=(1, 1))
+          (gate): Sigmoid()
+        )
+        (conv_pwl): Conv2d(576, 136, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNormAct2d(
+          136, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): Identity()
+        )
+        (drop_path): Identity()
+      )
+      (1): InvertedResidual(
+        (conv_pw): Conv2d(136, 816, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNormAct2d(
+          816, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): SiLU(inplace=True)
+        )
+        (conv_dw): Conv2d(816, 816, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), groups=816, bias=False)
+        (bn2): BatchNormAct2d(
+          816, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): SiLU(inplace=True)
+        )
+        (se): SqueezeExcite(
+          (conv_reduce): Conv2d(816, 34, kernel_size=(1, 1), stride=(1, 1))
+          (act1): SiLU(inplace=True)
+          (conv_expand): Conv2d(34, 816, kernel_size=(1, 1), stride=(1, 1))
+          (gate): Sigmoid()
+        )
+        (conv_pwl): Conv2d(816, 136, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNormAct2d(
+          136, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): Identity()
+        )
+        (drop_path): Identity()
+      )
+      (2): InvertedResidual(
+        (conv_pw): Conv2d(136, 816, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNormAct2d(
+          816, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): SiLU(inplace=True)
+        )
+        (conv_dw): Conv2d(816, 816, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), groups=816, bias=False)
+        (bn2): BatchNormAct2d(
+          816, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): SiLU(inplace=True)
+        )
+        (se): SqueezeExcite(
+          (conv_reduce): Conv2d(816, 34, kernel_size=(1, 1), stride=(1, 1))
+          (act1): SiLU(inplace=True)
+          (conv_expand): Conv2d(34, 816, kernel_size=(1, 1), stride=(1, 1))
+          (gate): Sigmoid()
+        )
+        (conv_pwl): Conv2d(816, 136, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNormAct2d(
+          136, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): Identity()
+        )
+        (drop_path): Identity()
+      )
+      (3): InvertedResidual(
+        (conv_pw): Conv2d(136, 816, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNormAct2d(
+          816, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): SiLU(inplace=True)
+        )
+        (conv_dw): Conv2d(816, 816, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), groups=816, bias=False)
+        (bn2): BatchNormAct2d(
+          816, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): SiLU(inplace=True)
+        )
+        (se): SqueezeExcite(
+          (conv_reduce): Conv2d(816, 34, kernel_size=(1, 1), stride=(1, 1))
+          (act1): SiLU(inplace=True)
+          (conv_expand): Conv2d(34, 816, kernel_size=(1, 1), stride=(1, 1))
+          (gate): Sigmoid()
+        )
+        (conv_pwl): Conv2d(816, 136, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNormAct2d(
+          136, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): Identity()
+        )
+        (drop_path): Identity()
+      )
+      (4): InvertedResidual(
+        (conv_pw): Conv2d(136, 816, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNormAct2d(
+          816, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): SiLU(inplace=True)
+        )
+        (conv_dw): Conv2d(816, 816, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), groups=816, bias=False)
+        (bn2): BatchNormAct2d(
+          816, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): SiLU(inplace=True)
+        )
+        (se): SqueezeExcite(
+          (conv_reduce): Conv2d(816, 34, kernel_size=(1, 1), stride=(1, 1))
+          (act1): SiLU(inplace=True)
+          (conv_expand): Conv2d(34, 816, kernel_size=(1, 1), stride=(1, 1))
+          (gate): Sigmoid()
+        )
+        (conv_pwl): Conv2d(816, 136, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNormAct2d(
+          136, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): Identity()
+        )
+        (drop_path): Identity()
+      )
+    )
+    (5): Sequential(
+      (0): InvertedResidual(
+        (conv_pw): Conv2d(136, 816, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNormAct2d(
+          816, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): SiLU(inplace=True)
+        )
+        (conv_dw): Conv2d(816, 816, kernel_size=(5, 5), stride=(2, 2), padding=(2, 2), groups=816, bias=False)
+        (bn2): BatchNormAct2d(
+          816, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): SiLU(inplace=True)
+        )
+        (se): SqueezeExcite(
+          (conv_reduce): Conv2d(816, 34, kernel_size=(1, 1), stride=(1, 1))
+          (act1): SiLU(inplace=True)
+          (conv_expand): Conv2d(34, 816, kernel_size=(1, 1), stride=(1, 1))
+          (gate): Sigmoid()
+        )
+        (conv_pwl): Conv2d(816, 232, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNormAct2d(
+          232, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): Identity()
+        )
+        (drop_path): Identity()
+      )
+      (1): InvertedResidual(
+        (conv_pw): Conv2d(232, 1392, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNormAct2d(
+          1392, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): SiLU(inplace=True)
+        )
+        (conv_dw): Conv2d(1392, 1392, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), groups=1392, bias=False)
+        (bn2): BatchNormAct2d(
+          1392, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): SiLU(inplace=True)
+        )
+        (se): SqueezeExcite(
+          (conv_reduce): Conv2d(1392, 58, kernel_size=(1, 1), stride=(1, 1))
+          (act1): SiLU(inplace=True)
+          (conv_expand): Conv2d(58, 1392, kernel_size=(1, 1), stride=(1, 1))
+          (gate): Sigmoid()
+        )
+        (conv_pwl): Conv2d(1392, 232, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNormAct2d(
+          232, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): Identity()
+        )
+        (drop_path): Identity()
+      )
+      (2): InvertedResidual(
+        (conv_pw): Conv2d(232, 1392, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNormAct2d(
+          1392, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): SiLU(inplace=True)
+        )
+        (conv_dw): Conv2d(1392, 1392, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), groups=1392, bias=False)
+        (bn2): BatchNormAct2d(
+          1392, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): SiLU(inplace=True)
+        )
+        (se): SqueezeExcite(
+          (conv_reduce): Conv2d(1392, 58, kernel_size=(1, 1), stride=(1, 1))
+          (act1): SiLU(inplace=True)
+          (conv_expand): Conv2d(58, 1392, kernel_size=(1, 1), stride=(1, 1))
+          (gate): Sigmoid()
+        )
+        (conv_pwl): Conv2d(1392, 232, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNormAct2d(
+          232, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): Identity()
+        )
+        (drop_path): Identity()
+      )
+      (3): InvertedResidual(
+        (conv_pw): Conv2d(232, 1392, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNormAct2d(
+          1392, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): SiLU(inplace=True)
+        )
+        (conv_dw): Conv2d(1392, 1392, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), groups=1392, bias=False)
+        (bn2): BatchNormAct2d(
+          1392, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): SiLU(inplace=True)
+        )
+        (se): SqueezeExcite(
+          (conv_reduce): Conv2d(1392, 58, kernel_size=(1, 1), stride=(1, 1))
+          (act1): SiLU(inplace=True)
+          (conv_expand): Conv2d(58, 1392, kernel_size=(1, 1), stride=(1, 1))
+          (gate): Sigmoid()
+        )
+        (conv_pwl): Conv2d(1392, 232, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNormAct2d(
+          232, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): Identity()
+        )
+        (drop_path): Identity()
+      )
+      (4): InvertedResidual(
+        (conv_pw): Conv2d(232, 1392, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNormAct2d(
+          1392, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): SiLU(inplace=True)
+        )
+        (conv_dw): Conv2d(1392, 1392, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), groups=1392, bias=False)
+        (bn2): BatchNormAct2d(
+          1392, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): SiLU(inplace=True)
+        )
+        (se): SqueezeExcite(
+          (conv_reduce): Conv2d(1392, 58, kernel_size=(1, 1), stride=(1, 1))
+          (act1): SiLU(inplace=True)
+          (conv_expand): Conv2d(58, 1392, kernel_size=(1, 1), stride=(1, 1))
+          (gate): Sigmoid()
+        )
+        (conv_pwl): Conv2d(1392, 232, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNormAct2d(
+          232, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): Identity()
+        )
+        (drop_path): Identity()
+      )
+      (5): InvertedResidual(
+        (conv_pw): Conv2d(232, 1392, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNormAct2d(
+          1392, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): SiLU(inplace=True)
+        )
+        (conv_dw): Conv2d(1392, 1392, kernel_size=(5, 5), stride=(1, 1), padding=(2, 2), groups=1392, bias=False)
+        (bn2): BatchNormAct2d(
+          1392, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): SiLU(inplace=True)
+        )
+        (se): SqueezeExcite(
+          (conv_reduce): Conv2d(1392, 58, kernel_size=(1, 1), stride=(1, 1))
+          (act1): SiLU(inplace=True)
+          (conv_expand): Conv2d(58, 1392, kernel_size=(1, 1), stride=(1, 1))
+          (gate): Sigmoid()
+        )
+        (conv_pwl): Conv2d(1392, 232, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNormAct2d(
+          232, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): Identity()
+        )
+        (drop_path): Identity()
+      )
+    )
+    (6): Sequential(
+      (0): InvertedResidual(
+        (conv_pw): Conv2d(232, 1392, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNormAct2d(
+          1392, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): SiLU(inplace=True)
+        )
+        (conv_dw): Conv2d(1392, 1392, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=1392, bias=False)
+        (bn2): BatchNormAct2d(
+          1392, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): SiLU(inplace=True)
+        )
+        (se): SqueezeExcite(
+          (conv_reduce): Conv2d(1392, 58, kernel_size=(1, 1), stride=(1, 1))
+          (act1): SiLU(inplace=True)
+          (conv_expand): Conv2d(58, 1392, kernel_size=(1, 1), stride=(1, 1))
+          (gate): Sigmoid()
+        )
+        (conv_pwl): Conv2d(1392, 384, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNormAct2d(
+          384, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): Identity()
+        )
+        (drop_path): Identity()
+      )
+      (1): InvertedResidual(
+        (conv_pw): Conv2d(384, 2304, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn1): BatchNormAct2d(
+          2304, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): SiLU(inplace=True)
+        )
+        (conv_dw): Conv2d(2304, 2304, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=2304, bias=False)
+        (bn2): BatchNormAct2d(
+          2304, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): SiLU(inplace=True)
+        )
+        (se): SqueezeExcite(
+          (conv_reduce): Conv2d(2304, 96, kernel_size=(1, 1), stride=(1, 1))
+          (act1): SiLU(inplace=True)
+          (conv_expand): Conv2d(96, 2304, kernel_size=(1, 1), stride=(1, 1))
+          (gate): Sigmoid()
+        )
+        (conv_pwl): Conv2d(2304, 384, kernel_size=(1, 1), stride=(1, 1), bias=False)
+        (bn3): BatchNormAct2d(
+          384, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+          (drop): Identity()
+          (act): Identity()
+        )
+        (drop_path): Identity()
+      )
+    )
+  )
+  (conv_head): Conv2d(384, 1536, kernel_size=(1, 1), stride=(1, 1), bias=False)
+  (bn2): BatchNormAct2d(
+    1536, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True
+    (drop): Identity()
+    (act): SiLU(inplace=True)
+  )
+  (global_pool): SelectAdaptivePool2d (pool_type=avg, flatten=Flatten(start_dim=1, end_dim=-1))
+  (classifier): Linear(in_features=1536, out_features=9, bias=True)
+)
+mode: test.  F1: 1.000 | Recall: 1.000 | Accuracy: 1.000: 100%|██████████| 814/814 [11:02<00:00,  1.23it/s]
+测试结果：
+acc: 1.0, F1: 1.0, recall: 1.0
+测试完成，heatmap保存在record下
+
+进程已结束,退出代码0
+
+
+
